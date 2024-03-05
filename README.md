@@ -1,7 +1,3 @@
-Below is a revised version of the README, formatted and structured to be compatible with a GitHub repository:
-
----
-
 # Market Overview
 
 The Market comprises two main vectors: Items and Spells, respectively. It offers a user-friendly Market Menu, allowing players to explore the available products within the Market. This menu becomes accessible when the player is on a Market-type grid tile. Besides, the Market facilitates methods for buying and selling the hero's items/spells.
