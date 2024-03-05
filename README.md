@@ -30,7 +30,3 @@ The Market comprises two main vectors: Items and Spells, respectively. It offers
 - For Linux execution:
   - Compile with `g++ *.cpp`
   - Run with `./a.out`
-
----
-
-Ensure to adapt the content according to your project specifics and GitHub's markdown styling for optimal presentation. This format highlights key aspects of your game, structured in a way that's conducive to the GitHub environment.
