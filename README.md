@@ -1,4 +1,4 @@
-# Hero's Quest: Realm of Legends
+# Console rpg adventure
 
 A text-based RPG adventure game where you choose your hero, battle monsters, explore a grid-based world, and trade in mystical markets.
 
