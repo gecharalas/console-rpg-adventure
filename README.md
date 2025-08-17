@@ -1,32 +1,181 @@
-# Market Overview
+# Hero's Quest: Realm of Legends
 
-The Market comprises two main vectors: Items and Spells, respectively. It offers a user-friendly Market Menu, allowing players to explore the available products within the Market. This menu becomes accessible when the player is on a Market-type grid tile. Besides, the Market facilitates methods for buying and selling the hero's items/spells.
+A text-based RPG adventure game where you choose your hero, battle monsters, explore a grid-based world, and trade in mystical markets.
+
+## Game Overview
+
+Hero's Quest: Realm of Legends is a console-based role-playing game that combines classic RPG elements with strategic combat and exploration. Choose from three unique hero classes, each with distinct abilities and progression paths, as you navigate through a 10x20 grid world filled with monsters, markets, and mysteries.
 
 ## Features
 
-- **Browse and Interact**: Players can easily browse through the Market's offerings, with each item/spell assigned a specific number to minimize selection errors.
-- **Purchase Mechanism**: If the hero meets the minimum requirements to acquire an item/spell, the purchase is executed, storing the item/spell in the respective inventory, occupying an inventory slot, and deducting the cost from the hero's wallet.
-- **Sales Functionality**: Players can sell items/spells from their inventory or those equipped, with a simple number input for inventory items or specific selection for equipped items (like weapons or armors).
+### Hero Classes
+- **Warrior**: Master of physical combat with high strength and durability
+- **Paladin**: Holy warrior with balanced stats and divine protection
+- **Sorcerer**: Arcane spellcaster with powerful magic abilities
 
-## Hero Configuration
+### World & Exploration
+- **10x20 Grid World**: Navigate through a carefully crafted map
+- **Multiple Tile Types**: 
+  - Market tiles for trading and shopping
+  - Monster encounter zones
+  - Non-accessible areas
+  - Safe zones for rest and recovery
 
-- The hero is characterized by two vectors: ItemsInventory and SpellsInventory, each with a capacity of four slots.
-- The hero possesses two pointers, `right_hand` and `left_hand`, representing the hero's ability to equip items like one-handed swords or shields, with special consideration for double-handed weapons.
-- The hero can equip/unequip items during battle without losing a turn but loses the turn if a potion is used.
+### Combat System
+- **Turn-based Battles**: Strategic combat against various monster types
+- **Monster Variety**: 
+  - Dragons: Powerful fire-breathing creatures
+  - Spirits: Ethereal beings with magical abilities
+  - Exoskeletons: Undead warriors with high defense
+- **Combat Mechanics**:
+  - Damage calculation based on strength and equipment
+  - Dodge chance based on agility
+  - Spell damage influenced by dexterity
+  - Armor provides damage reduction
 
-## Gameplay Dynamics
+### Market & Economy
+- **Trading System**: Buy and sell weapons, armor, spells, and potions
+- **Inventory Management**: 4-slot inventory for both items and spells
+- **Equipment System**: Dual-wield weapons or weapon + shield combinations
+- **Starting Capital**: 2000 gold to begin your adventure
 
-- The game supports single-hero selection and one-on-one monster battles.
-- Initial setup grants the hero 2000 gold for market transactions.
-- A custom, consistent grid map enhances the game's aesthetic and predictability.
-- Certain potions permanently enhance the hero's attributes like health, dexterity, agility, or strength.
-- The hero's Magic Power replenishes after each battle, aiding in ongoing gameplay.
-- In-game messages guide the player, negating the need for an external user manual.
-- It is advised to enlarge the terminal window for a better visual experience.
+### Progression System
+- **Experience Points**: Gain XP through battles to level up
+- **Attribute Growth**: Increase strength, dexterity, and agility
+- **Magic Power**: Replenishes after each battle for spellcasting
+- **Permanent Enhancements**: Special potions provide lasting stat boosts
+
+## Installation & Setup
+
+### Prerequisites
+- C++ compiler (GCC/G++ recommended)
+- Code::Blocks IDE (for Windows development)
+- Terminal/Command Prompt
+
+### Compilation Instructions
+
+#### Windows (Code::Blocks)
+1. Open the project in Code::Blocks
+2. Build the project (F9 or Build → Build)
+3. Run the executable
+
+#### Linux/Unix
+```bash
+# Navigate to project directory
+cd RPG
+
+# Compile all source files
+g++ *.cpp -o heros_quest
+
+# Run the game
+./heros_quest
+```
+
+#### macOS
+```bash
+# Navigate to project directory
+cd RPG
+
+# Compile all source files
+g++ *.cpp -o heros_quest
+
+# Run the game
+./heros_quest
+```
+
+## 🎮 How to Play
+
+### Starting Your Adventure
+1. **Hero Selection**: Choose from Warrior, Paladin, or Sorcerer
+2. **Name Your Hero**: Give your character a unique name
+3. **Begin Exploration**: Navigate the grid world using movement commands
+
+### Movement Controls
+- Use directional commands to move around the grid
+- Navigate to different tile types for various activities
+- Avoid non-accessible areas
+
+### Combat Guide
+- **Automatic Encounters**: Monsters appear when entering certain tiles
+- **Battle Options**:
+  - Attack with equipped weapons
+  - Cast spells (if available)
+  - Use potions for healing or buffs
+  - Equip/unequip items during battle
+- **Victory Rewards**: Gain experience points and money
+
+### Market Trading
+- **Access Markets**: Visit market tiles to trade
+- **Browse Inventory**: View available weapons, armor, spells, and potions
+- **Purchase Items**: Buy equipment that meets your hero's requirements
+- **Sell Equipment**: Trade unwanted items for gold
+- **Inventory Management**: Manage your 4-slot item and spell inventories
+
+### Equipment System
+- **Dual Wielding**: Equip weapons in both hands
+- **Weapon Types**: One-handed and two-handed weapons
+- **Armor**: Provides damage reduction
+- **Spells**: Magical abilities for sorcerers and paladins
+
+## Project Structure
+
+### Core Classes
+- `Hero.h/cpp`: Base hero class with common functionality
+- `Warrior.h/cpp`: Warrior hero specialization
+- `Paladin.h/cpp`: Paladin hero specialization  
+- `Sorcerer.h/cpp`: Sorcerer hero specialization
+
+### Combat System
+- `Monster.h/cpp`: Base monster class
+- `Dragon.h/cpp`: Dragon monster type
+- `Spirit.h/cpp`: Spirit monster type
+- `Exosceleton.h/cpp`: Exoskeleton monster type
+- `fight.cpp`: Combat mechanics and battle logic
+
+### World & Navigation
+- `Grid.h/cpp`: Main game world and grid management
+- `GridTile.h/cpp`: Individual tile types and properties
+- `move.cpp`: Movement and navigation logic
+
+### Items & Equipment
+- `Item.h/cpp`: Base item class
+- `Weapon.h/cpp`: Weapon items
+- `Armor.h/cpp`: Armor items
+- `Potion.h/cpp`: Consumable potions
+
+### Magic System
+- `Spell.h/cpp`: Base spell class
+- `FireSpell.h/cpp`: Fire-based spells
+- `IceSpell.h/cpp`: Ice-based spells
+- `LightingSpell.h/cpp`: Lightning-based spells
+- `SpellEffects.h/cpp`: Spell effect calculations
+
+### Market & Economy
+- `Market.h/cpp`: Market system and trading
+- `market_functions.cpp`: Market interaction functions
+- `more_market_functions.cpp`: Additional market features
+
+### Data Files
+- `weapons.txt`: Weapon database
+- `armors.txt`: Armor database
+- `spells.txt`: Spell database
+- `potions.txt`: Potion database
+- `names.txt`: Name generation data
+
+## Game Tips
+
+1. **Choose Your Hero Wisely**: Each class has unique strengths and playstyles
+2. **Manage Your Resources**: Balance health, magic power, and money
+3. **Visit Markets Regularly**: Upgrade your equipment as you progress
+4. **Use Potions Strategically**: Some provide permanent stat boosts
+5. **Explore Thoroughly**: Different areas contain various challenges and rewards
+6. **Enlarge Terminal Window**: For better visual experience and readability
 
 ## Technical Details
 
-- The game is tailored for Windows 10, developed using Code::Blocks.
-- For Linux execution:
-  - Compile with `g++ *.cpp`
-  - Run with `./a.out`
+- **Language**: C++
+- **Platform**: Cross-platform (Windows, Linux, macOS)
+- **Architecture**: Object-oriented design with inheritance
+- **Memory Management**: Manual memory management with proper cleanup
+- **File I/O**: Text-based data files for game content
+- **Random Generation**: Seeded random number generation for encounters
