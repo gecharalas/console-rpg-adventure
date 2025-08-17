@@ -83,7 +83,7 @@ g++ *.cpp -o heros_quest
 ./heros_quest
 ```
 
-## 🎮 How to Play
+## How to Play
 
 ### Starting Your Adventure
 1. **Hero Selection**: Choose from Warrior, Paladin, or Sorcerer
